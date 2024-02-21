@@ -7,6 +7,11 @@
 					<p> Опубликовано: {{ post.published_date }} </p>
 				</div>
 			{%endif%}
+				
+				{% if user.is_authenticated %}
+				<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><img src="https://www.svgrepo.com/show/67738/pen.svg" width="20px"/></a>
+				{% endif %}
+				
 				<h4>{{post.title}}</h4>
 				<p>{{ post.text|linebreaksbr }}</p>
 				<br>

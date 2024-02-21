@@ -11,7 +11,10 @@
 	<body>
 	
 		<div class="page-header">
-		<h1>Джанго MAN</h1>
+		{% if user.is_authenticated %}
+			<a href="{% url 'post_new' %}" class = "top-menu"><img width="40px" src="https://www.svgrepo.com/show/2087/plus.svg"</span></a>
+		{% endif %}
+			<h1>Джанго MAN</h1>
 		</div>
 		
 		<div class="content container">
